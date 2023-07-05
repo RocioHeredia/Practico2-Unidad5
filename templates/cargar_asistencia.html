@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cargar Asistencia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos1.css') }}">
+</head>
+<body>
+    <h1>Cargar Asistencia</h1>
+    <div class="table-container">
+        <form method="post" action="{{ url_for('guardar_asistencia', fecha=fecha, curso_id=curso_id, clase=clase, usuario_id=usuario_id) }}">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>Asistencia</th>
+                        <th>Justificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for estudiante in estudiantes %}
+                    <tr>
+                        <td>{{ estudiante.apellido }}</td>
+                        <td>{{ estudiante.nombre }}</td>
+                        <td>
+                            <select name="asistencia-{{ estudiante.id }}">
+                                <option value="s">Asistió</option>
+                                <option value="n">No Asistió</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="justificacion-{{ estudiante.id }}" placeholder="Justificación">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit" class="btn-submit">Guardar Asistencia</button>
+        </form>
+    </div>
+</body>
+</html>

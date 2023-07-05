@@ -1,0 +1,46 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-image: url("/static/img/fondo_inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px; /* Agregar un margen inferior para separar del resto del contenido */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.btn-round{
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    background-color: #EFD3CD; /* Color que se le coloca a los botones*/
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Agregar una transición suave al color de fondo */
+}
+
+.btn-round{
+    background-color: #D4B2A7;  /* Se coloca el color mas claro por estar presionado el boton */
+}
+
+.btn-round:hover{
+    background-color: #EFD3CD; /* Se coloca el color mas fuerte por no estar presionado el boton */
+}

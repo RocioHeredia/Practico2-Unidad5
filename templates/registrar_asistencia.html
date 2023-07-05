@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleccionar Curso, Clase y Fecha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos1.css') }}">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        select {
+            margin-left: 10px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seleccionar:</h1>
+
+    <form method="POST" action="">
+        <label for="curso_id">Curso:
+            <select name="curso_id" id="curso_id">
+                {% for curso in cursos %}
+                    <option value="{{ curso.anio }}">{{ curso.anio }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <label for="clase">Clase:
+            <select name="clase" id="clase">
+                <option value="1">Aula</option>
+                <option value="2">Educación Física</option>
+            </select>
+        </label>
+
+        <label for="fecha">Fecha:
+            <input type="date" name="fecha" id="fecha">
+        </label>
+
+        <input type="submit" value="Continuar">
+    </form>
+</body>
+</html>

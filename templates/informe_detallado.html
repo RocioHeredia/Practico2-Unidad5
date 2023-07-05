@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informe Detallado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos1.css') }}">
+</head>
+<body>
+    <h1>Informe Detallado</h1>
+
+    <form method="POST">
+        <label for="anio">Selecciona el año del curso:</label>
+        <select name="anio" id="anio">
+            {% for curso in cursos %}
+                <option value="{{ curso.id }}">{{ curso.anio }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Generar informe">
+    </form>
+</body>
+</html>

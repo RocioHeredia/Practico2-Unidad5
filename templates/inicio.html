@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <h1>Colegio San Miguel</h1>
+    <p>Seleccione una opción:</p>
+    <ul>
+        <li><a class="btn-round" href="{{ url_for('inicio_sesion') }}">Preceptor</a></li>
+        <li><a class="btn-round" href="asistencia">Padre</a></li>
+    </ul>
+</body>
+</html>

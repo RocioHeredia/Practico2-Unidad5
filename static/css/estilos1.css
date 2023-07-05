@@ -1,0 +1,52 @@
+body {
+       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       min-height: 80vh;
+       background-image: url("/static/img/fondo_otro.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+}
+
+h1 {
+      font-size: 40px;
+      margin-bottom: 20px; /* Agregar un margen inferior para separar del resto del contenido */
+}
+
+ul {
+       list-style-type: none;
+       padding: 0;
+}
+
+li {
+       margin-bottom: 10px;
+}
+
+ table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+ }
+
+.btn-round {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            background-color: #EFD3CD; /* Color rosa pálido para los botones */
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Agregar una transición suave al color de fondo */
+}
+
+.btn-round:hover {
+            background-color: #F3C7C2; /* Cambiar el color al pasar el mouse por encima del botón */
+}
+
+.btn-round:active {
+            background-color: #D4B2A7; /* Cambiar el color al presionar el botón */
+}

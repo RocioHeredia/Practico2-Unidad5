@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guardar Asistencia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos1.css') }}">
+    <style>
+        .success-message {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #E38150;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-back:hover {
+            background-color: #FCAC89;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guardar Asistencia</h1>
+
+    {% if asistencia_guardada %}
+        <p class="success-message">¡Asistencia guardada con éxito!</p>
+    {% endif %}
+
+    <a href="{{ url_for('inicio_sesion', usuario_id=usuario_id) }}" class="btn-back">Volver</a>
+</body>
+</html>

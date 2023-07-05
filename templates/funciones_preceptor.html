@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funciones del Preceptor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos1.css') }}">
+</head>
+<body>
+    <h1>Funciones del Preceptor</h1>
+    <ul>
+        <li>
+            <form method="GET" action="{{ url_for('registrar_asistencia', usuario_id=usuario.id) }}">
+                <button type="submit">Registrar Asistencia</button>
+            </form>
+        </li>
+        <li>
+            <form method="GET" action="{{ url_for('informe_detallado', usuario_id=usuario.id) }}">
+                <button type="submit">Informe con Detalles</button>
+            </form>
+        </li>
+    </ul>
+</body>
+</html>
